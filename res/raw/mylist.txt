@@ -1,0 +1,7 @@
+[Adblock Plus 2.0]
+! Checksum: sZUie4goySNJqncnAkLRDw
+! Version: 201604281144
+! Title: Allow non-intrusive advertising
+! Expires: 1 days
+! Homepage: https://acceptableads.org/
+! Text-based search ads on netzwelt.de
