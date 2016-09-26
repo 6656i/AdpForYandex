@@ -1,17 +1,18 @@
 [Adblock Plus 2.0]
-! Checksum: PUhzrKzvjE21OH9UxnEQyg
-! Version: 201604281150
-! Title: EasyList
-! Last modified: 28 Apr 2016 11:50 UTC
+! Checksum: Uhg10F/B8BlKfTe3qXjiw
+! Version: 201609261910
+! The contents of this filter list are fetched from the EasyList repository: https://github.com/easylist/easylist
+! Title: 我的自定义列表
+! Last modified: 26 Sep 2016 13:10 UTC
 ! Expires: 4 days (update frequency)
-! Homepage: https://easylist.github.io/
-! Licence: https://easylist-downloads.adblockplus.org/COPYING
+! Homepage: https://easylist.to/
+! Licence: https://easylist.to/pages/licence.html
 !
 ! Please report any unblocked adverts or problems
 ! in the forums (https://forums.lanik.us/)
 ! or via e-mail (easylist.subscription@gmail.com).
 !
 !-----------------------General advert blocking filters-----------------------!
-! *** easylist:easylist/easylist_general_block.txt ***
+! *** Fetched from: https://raw.githubusercontent.com/6656i/AdpForYandex/master/res/raw/mylist.txt ***
 tieba.baidu.com##.forum_recommend_c
 ~www.zdfans.com##.custom-ad
