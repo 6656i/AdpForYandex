@@ -1,7 +1,17 @@
 [Adblock Plus 2.0]
-! Checksum: sZUie4goySNJqncnAkLRDw
-! Version: 201604281144
-! Title: Allow non-intrusive advertising
-! Expires: 1 days
-! Homepage: https://acceptableads.org/
-! Text-based search ads on netzwelt.de
+! Checksum: PUhzrKzvjE21OH9UxnEQyg
+! Version: 201604281150
+! Title: EasyList
+! Last modified: 28 Apr 2016 11:50 UTC
+! Expires: 4 days (update frequency)
+! Homepage: https://easylist.github.io/
+! Licence: https://easylist-downloads.adblockplus.org/COPYING
+!
+! Please report any unblocked adverts or problems
+! in the forums (https://forums.lanik.us/)
+! or via e-mail (easylist.subscription@gmail.com).
+!
+!-----------------------General advert blocking filters-----------------------!
+! *** easylist:easylist/easylist_general_block.txt ***
+tieba.baidu.com##.forum_recommend_c
+~www.zdfans.com##.custom-ad
