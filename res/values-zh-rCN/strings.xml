@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Adp for Yandex</string>
+    <string name="automatic_updates">订阅列表更新设置</string>
+    <string name="manage_subscriptions">订阅过滤列表</string>
+    <string name="manage_subscriptions_summary">各地区语言列表</string>
+    <string name="more_blocking">其它广告过滤列表</string>
+    <string name="more_blocking_category">其它广告过滤列表</string>
+    <string name="more_blocking_summary">隐私及恶意网站列表，本地列表MyAdList.txt</string>
+    <string name="enabled_subscriptions">已激活的广告列表：</string>
+    <string name="available_subscriptions">其他地区过滤列表</string>
+    <string name="initialization_title">欢迎使用AdBlock Plus</string>
+    <string name="initialization_message">AdBlock Plus正在初始化...</string>
+    <string name="enable_acceptable_ads">允许可接受的广告</string>
+    <string name="last_update">最后更新:</string>
+    <string name="last_update_never">从未更新</string>
+    <string name="acceptable_ads_category">其他过滤设置：</string>
+    <string name="aa_dialog_title">温馨提示</string>
+    <string name="aa_dialog_button">我知道了</string>
+    <string name="sbrowser_dialog_title">提示：未找到支持的浏览器！</string>
+    <string name="sbrowser_dialog_button">安装Yandex浏览器</string>
+    <string name="setup_dialog_title">如何启用AdBlock Plus</string>
+    <string name="setup_dialog_button">立即启用</string>
+    <string name="subscription_disable_tracking">过滤网站跟踪，保护隐私</string>
+    <string name="subscription_disable_malware">过滤潜在危险的网站</string>
+    <string name="subscription_disable_anti_adblock">移除网站反广告提示</string>
+    <string name="subscription_disable_social_media">过滤社交网站按钮</string>
+    <!---            add by 6656i               -->
+    <string name="subscription_disable_developer_list_online">开发者自用列表（在线）</string>
+    <string name="subscription_disable_my_ad_list_local">过滤自定义列表（本地）</string>
+    <!---            end by 6656i               -->
+</resources>

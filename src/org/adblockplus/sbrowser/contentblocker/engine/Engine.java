@@ -371,7 +371,7 @@ public final class Engine
             .create(engine.getPrefsDefault(SUBSCRIPTIONS_EXCEPTIONSURL))
             .parseLines(readLines(exceptionsTxt)));
         exceptions.putMeta(Subscription.KEY_UPDATE_TIMESTAMP, "0");
-        exceptions.setEnabled(true);
+        exceptions.setEnabled(false);
       }
       finally
       {
@@ -427,8 +427,16 @@ public final class Engine
   URL createDownloadURL(final Subscription sub) throws IOException
   {
     final StringBuilder sb = new StringBuilder();
-
-    sb.append(sub.getURL());
+    
+    //************ add by 6656i***************//
+    
+    String downloadURL = sub.getURL().toString();
+	if(-1 != downloadURL.indexOf("https://127.0.0.1/my-ad-list.txt"))
+	downloadURL = downloadURL.replace("https://127.0.0.1/my-ad-list.txt", "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt");
+    sb.append(new URL(downloadURL));    
+    
+    //************ end by 6656i***************//
+    
     if (sub.getURL().getQuery() != null)
     {
       sb.append('&');
@@ -499,7 +507,7 @@ public final class Engine
                 {
                   final ChangeEnabledStateEvent cese = (ChangeEnabledStateEvent) event;
                   Log.d(TAG, "Changing " + cese.id + " to enabled: " + cese.enabled);
-                  engine.subscriptions.changeSubscriptionState(cese.id, cese.enabled);
+                  engine.subscriptions.changeSubscriptionState(cese.id, cese.enabled);                  
                   break;
                 }
                 case DOWNLOAD_FINISHED:
@@ -516,7 +524,7 @@ public final class Engine
                   break;
               }
             }
-
+            			
             final long currentTime = System.currentTimeMillis();
             if (currentTime > nextUpdateCheck)
             {
@@ -611,16 +619,27 @@ public final class Engine
 
   public void enqueueDownload(final Subscription sub, final boolean forced) throws IOException
   {
-    if (sub.getURL() != null && sub.shouldUpdate(forced))
+	  boolean isMyList = false;
+	  boolean isUpdate = sub.shouldUpdate(forced);
+	  isUpdate = true;
+	  URL isLocalRUL = sub.getURL();
+	  if(-1 != isLocalRUL.toString().indexOf("https://127.0.0.1/my-ad-list.txt")
+			  || -1 != isLocalRUL.toString().indexOf("https://git.oschina.net/6656i/AdpForYandex/raw/master/MyAdList.txt"))
+	  {
+		  isMyList = true;
+	  }
+	  
+	  
+    if (isLocalRUL != null && isUpdate)
     {
       final HashMap<String, String> headers = new HashMap<String, String>();
       final String lastModified = sub.getMeta(Subscription.KEY_HTTP_LAST_MODIFIED);
-      if (lastModified != null)
+      if (lastModified != null && !isMyList)
       {
         headers.put("If-Modified-Since", lastModified);
       }
       final String etag = sub.getMeta(Subscription.KEY_HTTP_ETAG);
-      if (etag != null)
+      if (etag != null && !isMyList)
       {
         headers.put("If-None-Match", etag);
       }

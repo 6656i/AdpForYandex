@@ -18,6 +18,8 @@
 package org.adblockplus.sbrowser.contentblocker.engine;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -31,6 +33,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Environment;
 import android.util.Log;
 
 @SuppressLint("DefaultLocale")
@@ -71,7 +74,31 @@ final class Downloader
     this.downloaderEnabled = true;
     this.unlock();
   }
-
+  
+  //************ add by 6656i***************//
+  static void readLocalfile(final DownloadJob job) throws IOException
+  {	  
+	  File file  = new File(Environment.getExternalStorageDirectory(),"myAdList.txt");
+	  final StringBuilder sb = new StringBuilder();
+	  final BufferedReader r = new BufferedReader(new InputStreamReader(new FileInputStream(file),"UTF-8"));
+	  try
+	  {
+	    for (int ch = r.read(); ch != -1; ch = r.read())
+	    {
+	        sb.append((char) ch);
+	    }
+	    job.responseText = sb.toString();
+	  }
+	      
+	  finally
+	  {
+	    r.close();
+	  }
+	  
+      
+  }
+  //************ end by 6656i***************//
+  
   static void download(final DownloadJob job) throws IOException
   {
     final HttpURLConnection connection = (HttpURLConnection) job.url.openConnection();
@@ -109,7 +136,17 @@ final class Downloader
       {
         sb.append((char) ch);
       }
-      job.responseText = sb.toString();
+      job.responseText = sb.toString(); 
+      
+      //************ add by 6656i***************//
+      
+      if(-1 != job.id.indexOf("https://127.0.0.1/my-ad-list.txt"))
+      {
+    	  readLocalfile(job);    	 
+      }
+      
+      //************ end by 6656i***************//
+      
     }
     finally
     {

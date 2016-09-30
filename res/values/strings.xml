@@ -1,31 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-
-    <string name="app_name">Adblock Plus for Samsung Browser</string>
+    <string name="app_name">Adp for Yandex</string>
     <string name="automatic_updates">Configure automatic updates</string>
     <string name="manage_subscriptions">Configure your filter lists</string>
     <string name="manage_subscriptions_summary">Change ad blocking languages</string>
     <string name="more_blocking">More blocking options</string>
     <string name="more_blocking_category">Other filter lists</string>
-    <string name="more_blocking_summary">Disable tracking and malware sites</string>
-    <!-- <string name="more_blocking_summary">Disable tracking and malware sites or add custom filter lists</string> -->
-    <string name="enabled_subscriptions">Active for websites in &#8230;</string>
+    <string name="more_blocking_summary">disable tracking, malware sites and local list named MyAdList.txt</string>
+    <string name="enabled_subscriptions">Active for websites in …</string>
     <string name="available_subscriptions">Other Languages</string>
-    <string name="initialization_title">Initialization</string>
-    <string name="initialization_message">Initializing &#8230;</string>
+    <string name="initialization_title">welcome to adblock plus</string>
+    <string name="initialization_message">Initializing …</string>
     <string name="enable_acceptable_ads">Allow some nonintrusive ads</string>
     <string name="last_update">Updated:</string>
     <string name="last_update_never">never</string>
     <string name="acceptable_ads_category">Acceptable Ads</string>
     <string name="aa_dialog_title">You\'re in control</string>
     <string name="aa_dialog_button">Got it</string>
-    <string name="sbrowser_dialog_title">Update your browser</string>
-    <string name="sbrowser_dialog_button">Get update</string>
-    <string name="setup_dialog_title">Enable Adblock Plus in Samsung Internet Browser</string>
-    <string name="setup_dialog_button">Configure Samsung Browser settings</string>
+    <string name="sbrowser_dialog_title">Warning:there is no browser supported </string>
+    <string name="sbrowser_dialog_button">install Yandex Browser</string>
+    <string name="setup_dialog_title">Enable Adblock Plus in Yandex Browser</string>
+    <string name="setup_dialog_button">Configure Yandex Browser settings</string>
     <string name="subscription_disable_tracking">Disable tracking</string>
     <string name="subscription_disable_malware">Disable malware domains</string>
     <string name="subscription_disable_anti_adblock">Disable anti-ad blocking messages</string>
     <string name="subscription_disable_social_media">Disable social media buttons</string>
-
+    <!---            add by 6656i               -->
+    <string name="subscription_disable_developer_list_online">Disable list of developer(online)</string>
+    <string name="subscription_disable_my_ad_list_local">Disable ad from my local list</string>
+    <!---            end by 6656i               -->
 </resources>

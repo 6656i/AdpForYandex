@@ -102,9 +102,9 @@ final class Subscriptions
     final Subscription sub = this.subscriptions.get(id);
     return sub != null && sub.isEnabled();
   }
-
+  
   public boolean changeSubscriptionState(final String id, final boolean enabled) throws IOException
-  {
+  { 
     final Subscription sub = this.subscriptions.get(id);
     if (sub != null)
     {

@@ -42,7 +42,7 @@ public class MainPreferences extends PreferenceActivity implements
     EngineService.OnEngineCreatedCallback, SharedPreferences.OnSharedPreferenceChangeListener
 {
   private static final String TAG = MainPreferences.class.getSimpleName();
-  private static final String SBROWSER_APP_ID = "com.sec.android.app.sbrowser";
+  private static final String YANDEX_APP_ID = "com.yandex.browser";
   private ProgressDialog progressDialog = null;
   private Engine engine = null;
   private AlertDialog setupDialog = null;
@@ -116,12 +116,12 @@ public class MainPreferences extends PreferenceActivity implements
               try
               {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id="
-                    + SBROWSER_APP_ID)));
+                    + YANDEX_APP_ID)));
               }
               catch (final Throwable t)
               {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri
-                    .parse("https://play.google.com/store/apps/details?id=" + SBROWSER_APP_ID)));
+                    .parse("http://www.wandoujia.com/apps/" + YANDEX_APP_ID)));
               }
             }
           }).create();

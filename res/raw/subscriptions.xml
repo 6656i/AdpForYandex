@@ -210,4 +210,20 @@
       <variant title="Fanboy's Social Blocking List" url="https://easylist-downloads.adblockplus.org/fanboy-social.txt"/>
     </variants>
   </subscription>
+  
+  <!---            add by 6656i               -->
+  
+  <subscription title="my ad list online" homepage="https://git.oschina.net/6656i/AdpForYandex" type="other">
+    <variants>
+      <variant title="my ad list online" url="https://git.oschina.net/6656i/AdpForYandex/raw/master/MyAdList.txt"/>
+    </variants>
+  </subscription>
+  <subscription title="my ad list local" homepage="https://localhost" type="other">
+    <variants>
+      <variant title="my ad list local" url="https://127.0.0.1/my-ad-list.txt"/>
+    </variants>
+  </subscription>
+  
+  <!---            add by 6656i               -->
+  
 </subscriptions>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="download_settings">
+    <item>仅WiFi时更新</item>
+    <item>总是自动更新</item>
+  </string-array>
+</resources>

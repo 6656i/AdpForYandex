@@ -46,7 +46,14 @@ public class MoreBlockingPreferenceCategory extends PreferenceCategory implement
       R.string.subscription_disable_tracking,
       R.string.subscription_disable_malware,
       R.string.subscription_disable_anti_adblock,
-      R.string.subscription_disable_social_media
+      R.string.subscription_disable_social_media,
+      
+      //************ add by 6656i***************//
+      
+      R.string.subscription_disable_developer_list_online,
+      R.string.subscription_disable_my_ad_list_local
+      
+      //************ end by 6656i***************//
   };
 
   private static final String[] WHITELISTED_LIST_URLS =
@@ -54,7 +61,14 @@ public class MoreBlockingPreferenceCategory extends PreferenceCategory implement
       "https://easylist-downloads.adblockplus.org/easyprivacy.txt",
       "https://easylist-downloads.adblockplus.org/malwaredomains_full.txt",
       "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
-      "https://easylist-downloads.adblockplus.org/fanboy-social.txt"
+      "https://easylist-downloads.adblockplus.org/fanboy-social.txt",
+      
+      //************ add by 6656i***************//
+      
+      "https://git.oschina.net/6656i/AdpForYandex/raw/master/MyAdList.txt",
+      "https://127.0.0.1/my-ad-list.txt"
+      
+      //************ end by 6656i***************//
   };
 
   private static final HashMap<String, Integer> URL_TO_RES_ID_MAP = new HashMap<String, Integer>();
